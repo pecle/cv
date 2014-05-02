@@ -4,10 +4,23 @@ $(document).ready(function(){
 	var progUpdated = false;
 	var langUpdated = false;
 
+	$('#accordion div.panel div.panel-heading').addClass('defaultCollapseColor');
+	$('#accordion div.panel:first-child div.panel-heading').removeClass('defaultCollapseColor');
+	$('#accordion div.panel:first-child div.panel-heading').addClass('myHoverCollapse');
+
+	$('div.panel-heading').click(function(){
+		$('div.panel-heading').removeClass('myHoverCollapse');
+		$('div.panel-heading').addClass('defaultCollapseColor');
+
+		$(this).removeClass('defaultCollapseColor');
+		$(this).addClass('myHoverCollapse');
+	});
+
 	$('#tab_competences').on('shown.bs.tab', function () {
 
 		if(!progWebUpdated){
-			updateBar($('#html_css'), 60);
+			updateBar($('#html'), 80);
+			updateBar($('#css'), 60);
 	  		updateBar($('#php'), 80);
 	  		updateBar($('#js'), 60);
 	  		updateBar($('#jee'), 60);
