@@ -58,7 +58,7 @@
 
 	<div class="panel-heading">
 	  <h4 class="panel-title">
-	    <a class="myPanelHeader" data-parent="#accordion" href="#competences"></a>
+	    <a class="myPanelHeader" data-parent="#accordion" href="#connaissances"></a>
 	  </h4>
 	</div>
 </div>
